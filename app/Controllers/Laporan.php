@@ -115,6 +115,8 @@ class Laporan extends BaseController
 
         if (in_array('TIMESTAMP', $fields)) {
             $builder->orderBy('TIMESTAMP', 'DESC');
+        } elseif (in_array('TANGGAL_WAKTU', $fields)) {
+            $builder->orderBy('TANGGAL_WAKTU', 'DESC');
         } elseif (in_array('timestamp', $fields)) {
             $builder->orderBy('timestamp', 'DESC');
         } elseif (in_array('created_at', $fields)) {
@@ -126,6 +128,10 @@ class Laporan extends BaseController
         }
 
         $logs = $builder->limit(100)->get()->getResultArray();
+
+        if ($this->request->isAJAX()) {
+            return $this->response->setJSON($logs);
+        }
 
         $data = [
             'title'      => 'Audit Log System | Teh Kota',
