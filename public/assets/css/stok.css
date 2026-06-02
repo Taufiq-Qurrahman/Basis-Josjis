@@ -1,0 +1,13 @@
+body { font-family: sans-serif; background: #f0f2f5; margin: 0; }
+.header-stok { background: #1abc9c; color: white; padding: 20px; display: flex; justify-content: space-between; }
+.btn-home { color: white; text-decoration: none; border: 1px solid white; padding: 5px 15px; border-radius: 4px; }
+.container { padding: 30px; }
+.filter-box { margin-bottom: 20px; background: white; padding: 15px; border-radius: 8px; }
+table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #f8f9fa; }
+.input-stok { width: 80px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; }
+.badge { padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.status-danger { background: #ff7675; color: white; }
+.status-safe { background: #55efc4; color: #00b894; }
+.btn-save { background: #3498db; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
